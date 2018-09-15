@@ -1,0 +1,13 @@
+# this is our development docker-compose building on top of the production docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "2"
+services:
+  railstutorial:
+    volumes:
+      - railstutorial-native-osx-sync:/home/ruby/
+
+# that the important thing
+volumes:
+  railstutorial-native-osx-sync:
+    external: true

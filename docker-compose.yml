@@ -1,0 +1,14 @@
+version: "2"
+services:
+  railstutorial:
+    build: .
+    working_dir: /home/ruby/
+    command: ["tail", "-f", "/dev/null"]
+    ports:
+    - "3000:3000"
+    # environment:
+    # - GEM_HOME=
+    # - BUNDLE_PATH=
+    # - BUNDLE_SILENCE_ROOT_WARNING=
+    # - BUNDLE_APP_CONFIG=
+
